@@ -121,7 +121,9 @@ String recommendation5 = new String ("While this movie did not recieve any award
 
 public boolean equals(Movie m)
 {
-if ((this.getTitle() == m.getTitle()) && (this.getDirector() == m.getDirector()) && (this.getRuntime() == m.getRuntime()) && (this.getGenre() == m.getGenre()) && (this.getAwardwinning() == m.getAwardwinning())) 
+ //string types are using the equals method, and primitive types use ==  
+if ((this.getTitle().equals(m.getTitle())) && (this.getDirector().equals(m.getDirector())) && (this.getRuntime() == (m.getRuntime())) && (this.getGenre().equals(m.getGenre())) && (this.getAwardwinning() == (m.getAwardwinning())))
+
 {
       return true;
 } 
@@ -135,7 +137,7 @@ public String toString()
 {
   if(awardwinning == true)
   {
-  return("The title of the movie is " + getTitle() + ", and it's directed by " + getDirector() + "." + "It's a " + getGenre() + " movie that has a runtime of " + getRuntime() + " minutes. It is an awardwinning movie!");
+  return("The title of the movie is " + getTitle() + ", and it's directed by " + getDirector() + ". " + "It's a " + getGenre() + " movie that has a runtime of " + getRuntime() + " minutes. It is an awardwinning movie!");
   }
   else
   {
